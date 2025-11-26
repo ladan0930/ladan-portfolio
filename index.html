@@ -46,14 +46,6 @@
       min-height: 100vh;
     }
 
-    @media (min-width: 1024px) {
-      .page {
-        padding: 32px 0 80px;
-      }
-    }
-
-    /* NAV / HEADER */
-
     header.nav {
       position: sticky;
       top: 0;
@@ -118,27 +110,6 @@
       font-size: 13px;
       color: var(--muted);
     }
-
-    .nav-links a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      transition: 0.16s ease;
-    }
-
-    .nav-links a:hover {
-      border-color: rgba(148, 163, 184, 0.6);
-      color: var(--text);
-      background: rgba(15, 23, 42, 0.96);
-    }
-
-    @media (max-width: 640px) {
-      .nav-links {
-        display: none;
-      }
-    }
-
-    /* HERO */
 
     .hero {
       margin-top: 32px;
@@ -206,37 +177,8 @@
       box-shadow: var(--shadow-soft);
     }
 
-    .hero-card h2 {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #cbd5f5;
-      margin-bottom: 4px;
-    }
-
-    .hero-list {
-      margin-top: 6px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .hero-list li {
-      margin-left: 16px;
-      margin-bottom: 4px;
-    }
-
-    /* SECTIONS */
-
     .section {
       margin-bottom: 36px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 18px;
     }
 
     .section-title {
@@ -246,23 +188,6 @@
       align-items: center;
       gap: 8px;
     }
-
-    .section-title-badge {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.98);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: var(--muted);
-    }
-
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      max-width: 360px;
-    }
-
-    /* PROJECT CARDS */
 
     .cards-grid {
       display: grid;
@@ -282,10 +207,6 @@
       font-size: 13px;
     }
 
-    .card-header {
-      margin-bottom: 2px;
-    }
-
     .card-title {
       font-size: 15px;
       font-weight: 600;
@@ -294,7 +215,6 @@
     .card-tag {
       font-size: 12px;
       color: var(--muted);
-      margin-top: 2px;
     }
 
     .card-section-title {
@@ -302,16 +222,12 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #cbd5f5;
-      margin-top: 6px;
+      margin-top: 8px;
       margin-bottom: 2px;
     }
 
     .card ul {
       margin-left: 16px;
-      margin-bottom: 4px;
-    }
-
-    .card li {
       margin-bottom: 4px;
     }
 
@@ -330,8 +246,6 @@
       border: 1px solid rgba(148, 163, 184, 0.55);
     }
 
-    /* FOOTER */
-
     .footer {
       margin-top: 26px;
       font-size: 11px;
@@ -342,7 +256,6 @@
 </head>
 <body>
   <div class="page">
-    <!-- NAV -->
     <header class="nav">
       <div class="nav-left">
         <div class="nav-logo">L</div>
@@ -351,9 +264,6 @@
           <span>Mechanical Engineering Intern Portfolio</span>
         </div>
       </div>
-      <nav class="nav-links">
-        <a href="#projects">Projects</a>
-      </nav>
     </header>
 
     <!-- HERO -->
@@ -367,156 +277,103 @@
           Selected mechanical projects by <span>Ladan Abdi</span>.
         </h1>
         <p class="hero-subtitle">
-          A focused look at three projects: an automated plant-watering robot, a thermodynamic
-          “drinking bird” demonstrator, and a redesigned injection-molded snap-fit component.
+          Focused on robotics, thermodynamic mechanisms, and injection-molded snap-fit redesign.
         </p>
       </div>
 
       <aside class="hero-card">
-        <h2>Project Snapshot</h2>
-        <ul class="hero-list">
-          <li>Indoor plant watering robot with moisture sensing and peristaltic pump actuation.</li>
-          <li>Glass “drinking bird” heat engine modeled as a passive thermal oscillator.</li>
-          <li>Injection-molded snap-fit shim redesign with major cost and assembly-time savings.</li>
+        <strong>Project Snapshot</strong>
+        <ul>
+          <li>Automated indoor plant watering robot</li>
+          <li>Glass "drinking bird" heat engine</li>
+          <li>Snap-fit injection-molded shim redesign</li>
         </ul>
       </aside>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <div class="section-header">
-        <div class="section-title">
-          Projects
-          <span class="section-title-badge">3 featured</span>
-        </div>
-        <p class="section-subtitle">
-          Each card summarizes project background, scope, my role, and results as documented in my portfolio.
-        </p>
-      </div>
+      <div class="section-title">Projects</div>
 
       <div class="cards-grid">
+
         <!-- Botanical Bot -->
         <article class="card">
-          <header class="card-header">
-            <h3 class="card-title">Botanical Bot – Indoor Plant Watering System</h3>
-            <p class="card-tag">Automated irrigation robot</p>
-          </header>
+          <h3 class="card-title">Botanical Bot – Indoor Plant Watering System</h3>
+          <p class="card-tag">Automated irrigation robot</p>
 
-          <div>
-            <div class="card-section-title">Project background</div>
-            <ul>
-              <li>Indoor plant-watering system that maintains plant hydration without human input.</li>
-            </ul>
+          <div class="card-section-title">My Role</div>
+          <ul>
+            <li>Designed & built a 3-roller peristaltic pump mechanism.</li>
+            <li>Developed custom 3D-printed housings and bearing supports.</li>
+            <li>Integrated motors and actuators to control water flow.</li>
+            <li>Tested system response & moisture-sensor accuracy.</li>
+          </ul>
 
-            <div class="card-section-title">Scope</div>
-            <ul>
-              <li>Develop a functional robot capable of detecting moisture levels and delivering controlled water flow.</li>
-              <li>Build a system using 3D-printed components and simple programmable actuation.</li>
-            </ul>
+          <div class="card-section-title">Results</div>
+          <ul>
+            <li>Fully functional automated watering robot.</li>
+            <li>Plant detection of height & color at 85% efficiency.</li>
+          </ul>
 
-            <div class="card-section-title">My role</div>
-            <ul>
-              <li>Owned the design and build of the peristaltic pump subsystem, developing a 3-roller mechanism with custom 3D-printed housings and bearing supports.</li>
-              <li>Integrated motors and actuators to provide motion of the bearings.</li>
-              <li>Tested prototypes and iterations.</li>
-            </ul>
-
-            <div class="card-section-title">Results</div>
-            <ul>
-              <li>Built and tested a fully functional automated watering robot with reliable moisture sensing and precise irrigation.</li>
-              <li>Achieved plant detection of height and color at an 85% efficiency rate.</li>
-            </ul>
-
-            <div class="pill-row">
-              <span class="pill">3D printing</span>
-              <span class="pill">Peristaltic pump design</span>
-              <span class="pill">Embedded actuation</span>
-            </div>
+          <div class="pill-row">
+            <span class="pill">3D printing</span>
+            <span class="pill">Peristaltic pump</span>
+            <span class="pill">Sensors</span>
           </div>
         </article>
 
-        <!-- Drinking bird -->
+        <!-- Drinking Bird -->
         <article class="card">
-          <header class="card-header">
-            <h3 class="card-title">Drinking Bird – Ideal Heat Engine Demonstrator</h3>
-            <p class="card-tag">Thermodynamic & mechanical analysis</p>
-          </header>
+          <h3 class="card-title">Drinking Bird – Ideal Heat Engine Demonstrator</h3>
+          <p class="card-tag">Thermodynamic analysis</p>
 
-          <div>
-            <div class="card-section-title">Project background</div>
-            <ul>
-              <li>Designed and analyzed a glass “drinking bird” heat engine to demonstrate heat transfer, phase change, and vapor-pressure-driven motion.</li>
-              <li>Heat-powered toy that repeatedly dips its beak into water because temperature differences move the internal evaporative liquid and keep it oscillating.</li>
-            </ul>
+          <div class="card-section-title">Project Background</div>
+          <ul>
+            <li>Modeled a glass “drinking bird” powered by evaporative cooling.</li>
+            <li>Analyzed motion stability, mass distribution, and pivot geometry.</li>
+          </ul>
 
-            <div class="card-section-title">Scope</div>
-            <ul>
-              <li>Break down the device into key mechanical systems (base, pivot, connecting rod, bulbs, felt head) and evaluate how each influences motion stability and cycle timing.</li>
-              <li>Model working-fluid behaviour to understand how pressure differentials translate into mechanical work and how geometry affects oscillation frequency.</li>
-            </ul>
+          <div class="card-section-title">Results</div>
+          <ul>
+            <li>Designed full assembly using glass, ABS, aluminum.</li>
+            <li>Verified repeatable oscillation driven by vapor-pressure change.</li>
+          </ul>
 
-            <div class="card-section-title">Results</div>
-            <ul>
-              <li>Designed a complete assembly with appropriate materials (glass, ABS, aluminum) to ensure stability, rigidity, and repeatable motion.</li>
-              <li>Verified that mass distribution, pivot placement, and bulb geometry produce a consistent tipping cycle aligned with expected pressure-driven oscillation.</li>
-              <li>Demonstrated how passive thermal inputs can drive continuous mechanical motion, linking thermodynamic theory to mechanical design.</li>
-            </ul>
-
-            <div class="pill-row">
-              <span class="pill">Heat transfer</span>
-              <span class="pill">Phase change</span>
-              <span class="pill">Mechanism design</span>
-            </div>
+          <div class="pill-row">
+            <span class="pill">Heat transfer</span>
+            <span class="pill">Mechanism design</span>
+            <span class="pill">Phase change</span>
           </div>
         </article>
 
-        <!-- Snap-fit redesign -->
+        <!-- Snap-Fit Project -->
         <article class="card">
-          <header class="card-header">
-            <h3 class="card-title">Snap-Fit Injection-Molded Component Redesign</h3>
-            <p class="card-tag">Internship project – shim & bracket system</p>
-          </header>
+          <h3 class="card-title">Snap-Fit Injection-Molded Component Redesign</h3>
+          <p class="card-tag">Mechanical redesign & manufacturability</p>
 
-          <div>
-            <div class="card-section-title">Background</div>
-            <ul>
-              <li>Existing assemblies required durable shims to ensure alignment and load transfer in a bracket mounting system.</li>
-              <li>Original aluminum part was costly to machine and relied on adhesive tapes and fasteners.</li>
-            </ul>
+          <div class="card-section-title">Scope</div>
+          <ul>
+            <li>Redesigned aluminum part as a nylon snap-fit part.</li>
+            <li>Added draft, undercuts, and uniform wall thickness for manufacturability.</li>
+            <li>3D-printed prototypes to verify insertion force & durability.</li>
+            <li>Created mold inserts for multiple thickness variants.</li>
+          </ul>
 
-            <div class="card-section-title">Problem definition</div>
-            <ul>
-              <li>New design needed to meet load requirements, maintain long-term durability, and be manufacturable without complex tooling.</li>
-            </ul>
+          <div class="card-section-title">Results</div>
+          <ul>
+            <li>Reduced part cost by 80%.</li>
+            <li>Cut assembly time from 20 minutes → under 5 minutes.</li>
+            <li>35% weight reduction vs aluminum version.</li>
+          </ul>
 
-            <div class="card-section-title">Scope</div>
-            <ul>
-              <li>Redesign the aluminum shim as a snap-fit injection-molded nylon component compatible with existing hardware.</li>
-              <li>Validate the design through calculations, prototypes, manufacturability review, and testing.</li>
-            </ul>
-
-            <div class="card-section-title">Design, prototyping & testing</div>
-            <ul>
-              <li>Implemented design calculations to verify undercut size, insertion force, and allowable strain while keeping nylon within elastic limits during assembly.</li>
-              <li>Applied DFM: added draft angles, uniform wall thickness, and undercut features to simplify tooling and molding.</li>
-              <li>Created mold inserts to vary thickness without new tooling, enabling multiple products from the same mold.</li>
-              <li>Produced multiple 3D-printed prototypes to test engagement, undercut performance, repeatability, and fit in the existing assembly.</li>
-            </ul>
-
-            <div class="card-section-title">Results</div>
-            <ul>
-              <li>Reduced part cost by 80% and cut assembly time from 20 minutes to under 5 minutes.</li>
-              <li>Redesigned machined aluminum components into injection-molded plastic alternatives, lowering material costs by over $12,000, reducing weight by 35%, and simplifying supplier logistics.</li>
-            </ul>
-
-            <div class="pill-row">
-              <span class="pill">Injection molding</span>
-              <span class="pill">Snap-fit design</span>
-              <span class="pill">DFM</span>
-              <span class="pill">Cost & weight reduction</span>
-            </div>
+          <div class="pill-row">
+            <span class="pill">DFM</span>
+            <span class="pill">Injection molding</span>
+            <span class="pill">Snap-fit design</span>
           </div>
         </article>
+
       </div>
     </section>
 
