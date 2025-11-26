@@ -66,6 +66,19 @@
       justify-content: space-between;
       box-shadow: var(--shadow-soft);
     }
+.project-images {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.project-images img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  object-fit: cover;
+}
 
     .nav-left {
       display: flex;
@@ -342,6 +355,12 @@
     <img src="bot-2.jpg" alt="Close-up of Botanical Bot peristaltic pump" />
     <img src="bot-3.jpg" alt="Detail of sensor and vertical stage on Botanical Bot" />
   </div>
+  <div class="project-images">
+  <img src="bot-1.png" alt="Botanical Bot full view" />
+  <img src="bot-2.png" alt="Botanical Bot pump close-up" />
+  <img src="bot-3.png" alt="Botanical Bot upper mechanism" />
+</div>
+
 </article>
         <!-- Robotic Arm Gripper -->
 <article class="card">
