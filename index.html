@@ -251,6 +251,20 @@
       font-size: 11px;
       color: var(--muted);
       text-align: center;
+      .project-images {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.project-images img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  object-fit: cover;
+}
+
     }
   </style>
 </head>
@@ -298,31 +312,37 @@
       <div class="cards-grid">
 
         <!-- Botanical Bot -->
-        <article class="card">
-          <h3 class="card-title">Botanical Bot – Indoor Plant Watering System</h3>
-          <p class="card-tag">Automated irrigation robot</p>
+<article class="card">
+  <h3 class="card-title">Botanical Bot – Indoor Plant Watering System</h3>
+  <p class="card-tag">Automated irrigation robot</p>
 
-          <div class="card-section-title">My Role</div>
-          <ul>
-            <li>Designed & built a 3-roller peristaltic pump mechanism.</li>
-            <li>Developed custom 3D-printed housings and bearing supports.</li>
-            <li>Integrated motors and actuators to control water flow.</li>
-            <li>Tested system response & moisture-sensor accuracy.</li>
-          </ul>
+  <div class="card-section-title">My Role</div>
+  <ul>
+    <li>Designed & built a 3-roller peristaltic pump mechanism.</li>
+    <li>Developed custom 3D-printed housings and bearing supports.</li>
+    <li>Integrated motors and actuators to control water flow.</li>
+    <li>Tested system response & moisture-sensor accuracy.</li>
+  </ul>
 
-          <div class="card-section-title">Results</div>
-          <ul>
-            <li>Fully functional automated watering robot.</li>
-            <li>Plant detection of height & color at 85% efficiency.</li>
-          </ul>
+  <div class="card-section-title">Results</div>
+  <ul>
+    <li>Fully functional automated watering robot.</li>
+    <li>Plant detection of height & color at 85% efficiency.</li>
+  </ul>
 
-          <div class="pill-row">
-            <span class="pill">3D printing</span>
-            <span class="pill">Peristaltic pump</span>
-            <span class="pill">Sensors</span>
-          </div>
-        </article>
+  <div class="pill-row">
+    <span class="pill">3D printing</span>
+    <span class="pill">Peristaltic pump</span>
+    <span class="pill">Sensors</span>
+  </div>
 
+  <!-- NEW: images (3D prints / final build only) -->
+  <div class="project-images">
+    <img src="bot-1.jpg" alt="Botanical Bot full view on table" />
+    <img src="bot-2.jpg" alt="Close-up of Botanical Bot peristaltic pump" />
+    <img src="bot-3.jpg" alt="Detail of sensor and vertical stage on Botanical Bot" />
+  </div>
+</article>
         <!-- Drinking Bird -->
         <article class="card">
           <h3 class="card-title">Drinking Bird – Ideal Heat Engine Demonstrator</h3>
