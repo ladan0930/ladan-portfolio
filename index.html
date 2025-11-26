@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ladan Abdi | Mechanical Engineering Intern Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #050816;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #000 70%);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      min-height: 100vh;
+    }
+
+    @media (min-width: 1024px) {
+      .page {
+        padding: 32px 0 80px;
+      }
+    }
+
+    /* NAV / HEADER */
+
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin-bottom: 24px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(
+          120deg,
+          rgba(15, 23, 42, 0.96),
+          rgba(15, 23, 42, 0.94)
+        ),
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent);
+      background: radial-gradient(circle at top, #1f2937, #020617);
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-title span:first-child {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-title span:last-child {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: 0.16s ease;
+    }
+
+    .nav-links a:hover {
+      border-color: rgba(148, 163, 184, 0.6);
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.96);
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* HERO */
+
+    .hero {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hero-tag {
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.94);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      width: fit-content;
+    }
+
+    .hero-tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #4ade80;
+      box-shadow: 0 0 0 6px rgba(74, 222, 128, 0.18);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 4vw, 40px);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .hero-card {
+      border-radius: 20px;
+      background: radial-gradient(circle at top, #020617, #000 70%);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 14px 16px;
+      font-size: 13px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #cbd5f5;
+      margin-bottom: 4px;
+    }
+
+    .hero-list {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-list li {
+      margin-left: 16px;
+      margin-bottom: 4px;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title-badge {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 360px;
+    }
+
+    /* PROJECT CARDS */
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: var(--radius-xl);
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.9);
+      font-size: 13px;
+    }
+
+    .card-header {
+      margin-bottom: 2px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card-tag {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .card-section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #cbd5f5;
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+
+    .card ul {
+      margin-left: 16px;
+      margin-bottom: 4px;
+    }
+
+    .card li {
+      margin-bottom: 4px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 26px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-left">
+        <div class="nav-logo">L</div>
+        <div class="nav-title">
+          <span>Ladan Abdi</span>
+          <span>Mechanical Engineering Intern Portfolio</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          <span>Mechanical Engineering · Project Portfolio</span>
+        </div>
+        <h1 class="hero-title">
+          Selected mechanical projects by <span>Ladan Abdi</span>.
+        </h1>
+        <p class="hero-subtitle">
+          A focused look at three projects: an automated plant-watering robot, a thermodynamic
+          “drinking bird” demonstrator, and a redesigned injection-molded snap-fit component.
+        </p>
+      </div>
+
+      <aside class="hero-card">
+        <h2>Project Snapshot</h2>
+        <ul class="hero-list">
+          <li>Indoor plant watering robot with moisture sensing and peristaltic pump actuation.</li>
+          <li>Glass “drinking bird” heat engine modeled as a passive thermal oscillator.</li>
+          <li>Injection-molded snap-fit shim redesign with major cost and assembly-time savings.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <div class="section-title">
+          Projects
+          <span class="section-title-badge">3 featured</span>
+        </div>
+        <p class="section-subtitle">
+          Each card summarizes project background, scope, my role, and results as documented in my portfolio.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Botanical Bot -->
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Botanical Bot – Indoor Plant Watering System</h3>
+            <p class="card-tag">Automated irrigation robot</p>
+          </header>
+
+          <div>
+            <div class="card-section-title">Project background</div>
+            <ul>
+              <li>Indoor plant-watering system that maintains plant hydration without human input.</li>
+            </ul>
+
+            <div class="card-section-title">Scope</div>
+            <ul>
+              <li>Develop a functional robot capable of detecting moisture levels and delivering controlled water flow.</li>
+              <li>Build a system using 3D-printed components and simple programmable actuation.</li>
+            </ul>
+
+            <div class="card-section-title">My role</div>
+            <ul>
+              <li>Owned the design and build of the peristaltic pump subsystem, developing a 3-roller mechanism with custom 3D-printed housings and bearing supports.</li>
+              <li>Integrated motors and actuators to provide motion of the bearings.</li>
+              <li>Tested prototypes and iterations.</li>
+            </ul>
+
+            <div class="card-section-title">Results</div>
+            <ul>
+              <li>Built and tested a fully functional automated watering robot with reliable moisture sensing and precise irrigation.</li>
+              <li>Achieved plant detection of height and color at an 85% efficiency rate.</li>
+            </ul>
+
+            <div class="pill-row">
+              <span class="pill">3D printing</span>
+              <span class="pill">Peristaltic pump design</span>
+              <span class="pill">Embedded actuation</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Drinking bird -->
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Drinking Bird – Ideal Heat Engine Demonstrator</h3>
+            <p class="card-tag">Thermodynamic & mechanical analysis</p>
+          </header>
+
+          <div>
+            <div class="card-section-title">Project background</div>
+            <ul>
+              <li>Designed and analyzed a glass “drinking bird” heat engine to demonstrate heat transfer, phase change, and vapor-pressure-driven motion.</li>
+              <li>Heat-powered toy that repeatedly dips its beak into water because temperature differences move the internal evaporative liquid and keep it oscillating.</li>
+            </ul>
+
+            <div class="card-section-title">Scope</div>
+            <ul>
+              <li>Break down the device into key mechanical systems (base, pivot, connecting rod, bulbs, felt head) and evaluate how each influences motion stability and cycle timing.</li>
+              <li>Model working-fluid behaviour to understand how pressure differentials translate into mechanical work and how geometry affects oscillation frequency.</li>
+            </ul>
+
+            <div class="card-section-title">Results</div>
+            <ul>
+              <li>Designed a complete assembly with appropriate materials (glass, ABS, aluminum) to ensure stability, rigidity, and repeatable motion.</li>
+              <li>Verified that mass distribution, pivot placement, and bulb geometry produce a consistent tipping cycle aligned with expected pressure-driven oscillation.</li>
+              <li>Demonstrated how passive thermal inputs can drive continuous mechanical motion, linking thermodynamic theory to mechanical design.</li>
+            </ul>
+
+            <div class="pill-row">
+              <span class="pill">Heat transfer</span>
+              <span class="pill">Phase change</span>
+              <span class="pill">Mechanism design</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Snap-fit redesign -->
+        <article class="card">
+          <header class="card-header">
+            <h3 class="card-title">Snap-Fit Injection-Molded Component Redesign</h3>
+            <p class="card-tag">Internship project – shim & bracket system</p>
+          </header>
+
+          <div>
+            <div class="card-section-title">Background</div>
+            <ul>
+              <li>Existing assemblies required durable shims to ensure alignment and load transfer in a bracket mounting system.</li>
+              <li>Original aluminum part was costly to machine and relied on adhesive tapes and fasteners.</li>
+            </ul>
+
+            <div class="card-section-title">Problem definition</div>
+            <ul>
+              <li>New design needed to meet load requirements, maintain long-term durability, and be manufacturable without complex tooling.</li>
+            </ul>
+
+            <div class="card-section-title">Scope</div>
+            <ul>
+              <li>Redesign the aluminum shim as a snap-fit injection-molded nylon component compatible with existing hardware.</li>
+              <li>Validate the design through calculations, prototypes, manufacturability review, and testing.</li>
+            </ul>
+
+            <div class="card-section-title">Design, prototyping & testing</div>
+            <ul>
+              <li>Implemented design calculations to verify undercut size, insertion force, and allowable strain while keeping nylon within elastic limits during assembly.</li>
+              <li>Applied DFM: added draft angles, uniform wall thickness, and undercut features to simplify tooling and molding.</li>
+              <li>Created mold inserts to vary thickness without new tooling, enabling multiple products from the same mold.</li>
+              <li>Produced multiple 3D-printed prototypes to test engagement, undercut performance, repeatability, and fit in the existing assembly.</li>
+            </ul>
+
+            <div class="card-section-title">Results</div>
+            <ul>
+              <li>Reduced part cost by 80% and cut assembly time from 20 minutes to under 5 minutes.</li>
+              <li>Redesigned machined aluminum components into injection-molded plastic alternatives, lowering material costs by over $12,000, reducing weight by 35%, and simplifying supplier logistics.</li>
+            </ul>
+
+            <div class="pill-row">
+              <span class="pill">Injection molding</span>
+              <span class="pill">Snap-fit design</span>
+              <span class="pill">DFM</span>
+              <span class="pill">Cost & weight reduction</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Ladan Abdi · Mechanical Engineering Intern Portfolio
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
