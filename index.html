@@ -30,7 +30,7 @@
         "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #020617 0, #000 70%);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -40,7 +40,7 @@
     }
 
     .page {
-      max-width: 980px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 24px 20px 64px;
       min-height: 100vh;
@@ -49,9 +49,9 @@
     header.nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      margin-bottom: 24px;
-      padding: 10px 18px;
+      z-index: 100;
+      margin-bottom: 32px;
+      padding: 12px 20px;
       border-radius: 999px;
       background: linear-gradient(
           120deg,
@@ -66,36 +66,23 @@
       justify-content: space-between;
       box-shadow: var(--shadow-soft);
     }
-.project-images {
-  margin-top: 8px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 8px;
-}
-
-.project-images img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  object-fit: cover;
-}
 
     .nav-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .nav-logo {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--accent);
       background: radial-gradient(circle at top, #1f2937, #020617);
     }
@@ -103,11 +90,12 @@
     .nav-title {
       display: flex;
       flex-direction: column;
+      line-height: 1.2;
     }
 
     .nav-title span:first-child {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
@@ -117,32 +105,25 @@
       color: var(--muted);
     }
 
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
     .hero {
-      margin-top: 32px;
-      margin-bottom: 32px;
+      margin-top: 40px;
+      margin-bottom: 48px;
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 24px;
+      gap: 32px;
       align-items: center;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 800px) {
       .hero {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
       }
     }
 
     .hero-text {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
 
     .hero-tag {
@@ -150,7 +131,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: 999px;
       background: rgba(15, 23, 42, 0.94);
       border: 1px solid rgba(148, 163, 184, 0.45);
@@ -158,25 +139,29 @@
     }
 
     .hero-tag-dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
       background: #4ade80;
-      box-shadow: 0 0 0 6px rgba(74, 222, 128, 0.18);
+      box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.15);
     }
 
     .hero-title {
-      font-size: clamp(30px, 4vw, 40px);
+      font-size: clamp(32px, 5vw, 44px);
       line-height: 1.1;
-      font-weight: 700;
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
     .hero-title span {
       color: var(--accent);
+      background: linear-gradient(to right, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero-subtitle {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--muted);
       max-width: 520px;
     }
@@ -185,112 +170,147 @@
       border-radius: 20px;
       background: radial-gradient(circle at top, #020617, #000 70%);
       border: 1px solid rgba(148, 163, 184, 0.35);
-      padding: 14px 16px;
-      font-size: 13px;
+      padding: 20px;
+      font-size: 14px;
       box-shadow: var(--shadow-soft);
+    }
+    
+    .hero-card ul {
+        margin-left: 20px;
+        margin-top: 10px;
+        color: var(--muted);
     }
 
     .section {
-      margin-bottom: 36px;
+      margin-bottom: 48px;
     }
 
     .section-title {
-      font-size: 18px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-left: 4px;
+      border-left: 4px solid var(--accent);
+      line-height: 1;
+      padding-left: 12px;
     }
 
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-
+    /* Standard Card Styles */
     .card {
       border-radius: var(--radius-xl);
-      background: rgba(15, 23, 42, 0.98);
+      background: rgba(15, 23, 42, 0.6);
       border: 1px solid var(--border);
-      padding: 14px 14px 12px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.9);
-      font-size: 13px;
+      gap: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(10px);
+      margin-bottom: 24px; /* Space between stacked cards */
     }
 
     .card-title {
-      font-size: 15px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
     }
 
     .card-tag {
-      font-size: 12px;
-      color: var(--muted);
+      font-size: 13px;
+      color: var(--accent);
+      font-family: monospace;
+      margin-bottom: 8px;
     }
 
     .card-section-title {
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #cbd5f5;
-      margin-top: 8px;
-      margin-bottom: 2px;
+      letter-spacing: 0.1em;
+      color: #94a3b8;
+      font-weight: 700;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      padding-bottom: 4px;
+      width: fit-content;
     }
 
     .card ul {
-      margin-left: 16px;
-      margin-bottom: 4px;
+      margin-left: 20px;
+      margin-bottom: 8px;
+      color: #d1d5db;
+      font-size: 14px;
+    }
+    
+    .card li {
+        margin-bottom: 6px;
     }
 
+    /* GRID LAYOUT FOR BOTTOM CARDS */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 24px;
+    }
+
+    /* PILLS */
     .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
+      gap: 8px;
+      margin-top: 12px;
     }
 
     .pill {
       font-size: 11px;
-      padding: 4px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* IMAGE GALLERIES */
+    .project-images {
+      margin: 16px 0;
+      display: grid;
+      gap: 12px;
+    }
+    
+    /* Standard gallery size (small thumbnails) */
+    .project-images {
+       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    /* LARGE gallery size (specifically for Stirling Engine) */
+    .project-images.gallery-large {
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    }
+
+    .project-images img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      object-fit: cover;
+      aspect-ratio: 4/3; /* Keeps images consistent shape */
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      background: #000;
+    }
+
+    .project-images img:hover {
+        transform: scale(1.02);
+        border-color: var(--accent);
     }
 
     .footer {
-      margin-top: 26px;
-      font-size: 11px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
       color: var(--muted);
       text-align: center;
-      .project-images {
-  margin-top: 8px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 8px;
-}
-
-.project-images img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  object-fit: cover;
-}
-.project-images {
-  margin-top: 8px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 8px;
-}
-
-.project-images img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  object-fit: cover;
-}
-
     }
   </style>
 </head>
@@ -306,7 +326,6 @@
       </div>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
         <div class="hero-tag">
@@ -317,7 +336,7 @@
           Mechanical Design projects by <span>Ladan Abdi</span>.
         </h1>
         <p class="hero-subtitle">
-      Using SolidWorks, CATIA V5 and Fusion 360
+          Specializing in precision mechanism design, CAD modeling, and rapid prototyping using SolidWorks, CATIA V5, and Fusion 360.
         </p>
       </div>
 
@@ -325,159 +344,137 @@
         <strong>Project Snapshot</strong>
         <ul>
           <li>Automated indoor plant watering robot</li>
-           <li>Sterling Engine Design project</li>
+          <li>Stirling Engine Design project</li>
           <li>Glass "drinking bird" heat engine</li>
-          <li>Robotic Arm Gripper — Mechanical End-Effector Design</li>
+          <li>Robotic Arm Gripper — End-Effector Design</li>
         </ul>
       </aside>
     </section>
-<section id="projects" class="section">
-  <div class="section-title">Projects</div>
 
-  <article class="card">
-    <h3 class="card-title">Stirling Engine — Mechanical Design</h3>
-    <p class="card-tag">Engine · SolidWorks · 3D-Model</p>
+    <section id="projects" class="section">
+      <div class="section-title">Projects</div>
 
-    <div class="project-images">
-      <img src="sterling engine drawing.png" alt="sterling engine drawing" />
-      <img src="sterling1.png" alt="sterling engine view 1" />
-      <img src="sterling2.png" alt="sterling engine view 2" />
-      <img src="sterling3.png" alt="sterling engine view 3" />
-      <img src="sterling4.png" alt="sterling engine view 4" />
-      <img src="sterling5.png" alt="sterling engine view 5" />
-      <img src="sterling6.png" alt="sterling engine view 6" />
-    </div>
+      <article class="card">
+        <h3 class="card-title">Stirling Engine — Mechanical Design</h3>
+        <p class="card-tag">Engine · SolidWorks · 3D-Model</p>
 
-    <div class="card-section-title">Project Background</div>
-    <ul>
-      <li>Objective: To design and model a functional Alpha-type Stirling engine, focusing on precise linkage kinematics and thermal-to-mechanical energy conversion.</li>
-    </ul>
+        <div class="project-images gallery-large">
+          <img src="sterling engine drawing.png" alt="Sterling engine drawing" />
+          <img src="sterling1.png" alt="Sterling engine view 1" />
+          <img src="sterling2.png" alt="Sterling engine view 2" />
+          <img src="sterling3.png" alt="Sterling engine view 3" />
+          <img src="sterling4.png" alt="Sterling engine view 4" />
+          <img src="sterling5.png" alt="Sterling engine view 5" />
+          <img src="sterling6.png" alt="Sterling engine view 6" />
+        </div>
 
-    <div class="card-section-title">Key Technical Features</div>
-    <ul>
-      <li>Kinematics: Modeled a 90-degree phase shift between the power piston and displacer to optimize the thermodynamic cycle.</li>
-      <li>Design for Assembly (DFA): Utilized standard fastener sizes (M3/M4) and incorporated press-fit bearings for the crankshaft to ensure smooth rotation.</li>
-      <li>Material Selection: Specified high-thermal-conductivity materials for the hot end and transparent borosilicate glass for the displacer cylinder to allow for visual inspection of the stroke.</li>
-    </ul>
-  </article>
-</section>
+        <div class="card-section-title">Project Background</div>
+        <ul>
+          <li>Objective: To design and model a functional Alpha-type Stirling engine, focusing on precise linkage kinematics and thermal-to-mechanical energy conversion.</li>
+        </ul>
 
+        <div class="card-section-title">Key Technical Features</div>
+        <ul>
+          <li>Kinematics: Modeled a 90-degree phase shift between the power piston and displacer to optimize the thermodynamic cycle.</li>
+          <li>Design for Assembly (DFA): Utilized standard fastener sizes (M3/M4) and incorporated press-fit bearings for the crankshaft to ensure smooth rotation.</li>
+          <li>Material Selection: Specified high-thermal-conductivity materials for the hot end and transparent borosilicate glass for the displacer cylinder to allow for visual inspection of the stroke.</li>
+        </ul>
+      </article>
 
-      <!-- Robotic Camera Inspection System -->
-<article class="card">
-  <h3 class="card-title">Robotic Camera Inspection System — Mechanical Design</h3>
-  <p class="card-tag">Camera · Fusion 360 · 3D-Printed Prototype</p>
+      <article class="card">
+        <h3 class="card-title">Robotic Camera Inspection System</h3>
+        <p class="card-tag">Camera · Fusion 360 · 3D-Printed Prototype</p>
 
-  <div class="project-images">
-    <img src="robot-assy RENDER.jpg" alt="Robotic Camera Render" />
-    <img src="robot-camera-assembly.png" alt="Robotic Camera Close-up" />
-    <img src="robot-camera-assembly2.png" alt="Technical Drawing" />
-  </div>
+        <div class="project-images">
+          <img src="robot-assy RENDER.jpg" alt="Robotic Camera Render" />
+          <img src="robot-camera-assembly.png" alt="Robotic Camera Close-up" />
+          <img src="robot-camera-assembly2.png" alt="Technical Drawing" />
+        </div>
 
-  <div class="card-section-title">Project Background</div>
-  <ul>
-    <li>Designed an automated camera inspection robot in Fusion 360 to perform repeatable, controlled visual inspection tasks.</li>
-    <li>Implemented motorized actuation for camera positioning and smooth motion control.</li>
-    <li>Added hard stops, compliant surfaces, and proper clearances to ensure reliable, repeatable movement.</li>
-  </ul>
+        <div class="card-section-title">Project Background</div>
+        <ul>
+          <li>Designed an automated camera inspection robot in Fusion 360 to perform repeatable, controlled visual inspection tasks.</li>
+          <li>Implemented motorized actuation for camera positioning and smooth motion control.</li>
+          <li>Added hard stops, compliant surfaces, and proper clearances to ensure reliable, repeatable movement.</li>
+        </ul>
 
-  <div class="card-section-title">Key Responsibilities</div>
-  <ul>
-    <li>Developed 3D CAD models for structural components, joints, and mounting hardware.</li>
-    <li>Simulated actuation and range of motion to validate mechanical performance.</li>
-    <li>Collaborated with teammates to refine geometry, evaluate manufacturability, and optimize assembly.</li>
-  </ul>
+        <div class="card-section-title">Key Responsibilities</div>
+        <ul>
+          <li>Developed 3D CAD models for structural components, joints, and mounting hardware.</li>
+          <li>Simulated actuation and range of motion to validate mechanical performance.</li>
+          <li>Collaborated with teammates to refine geometry, evaluate manufacturability, and optimize assembly.</li>
+        </ul>
 
-  <div class="card-section-title">Technologies</div>
-  <ul>
-    <li>Fusion 360 (CAD modeling, assembly design)</li>
-    <li>Motor & electronics integration</li>
-    <li>Mechanical design fundamentals</li>
-  </ul>
-</article>
-
+        <div class="pill-row">
+            <span class="pill">Fusion 360</span>
+            <span class="pill">Motor Integration</span>
+            <span class="pill">Mechanical Design</span>
+        </div>
+      </article>
 
       <div class="cards-grid">
-   <!-- Robotic Arm Gripper -->
-<article class="card">
-  <h3 class="card-title">Robotic Arm Gripper — Mechanical End-Effector Design</h3>
-  <p class="card-tag">Precision gripper · Fusion 360 · 3D-printed prototype</p>
-
-  <div class="project-images">
-    <img src="Robotic Arm Gripper.png" alt="Robotic arm gripper design" />
-    <img src="Robotic_Gripper Drawing v1.pdf" alt="Close-up" />
-
-  
-</div>
-
-  </div>
-
-  <div class="card-section-title">Project Background</div>
-  <ul>
-    <li>Designed a two-finger robotic gripper capable of securely grasping small objects with controlled force.</li>
-    <li>Modeled finger geometry, linkages, and actuation paths in Fusion 360.</li>
-    <li>Integrated hard stops, compliant surfaces, and proper clearances to ensure repeatable gripping motion.</li>
-    <li>Exported and 3D-printed the end-effector components to verify ergonomics and kinematic motion.</li>
-  </ul>
-
-  <div class="card-section-title">Key Responsibilities</div>
-  <ul>
-    <li>Developed CAD models for fingers, mounts, and joint components.</li>
-    <li>Simulated actuation and range-of-motion to ensure stable grasping.</li>
-    <li>Collaborated with mechanical teammates to evaluate grip force, finger geometry, and part manufacturability.</li>
-  </ul>
-
-  <div class="card-section-title">Technologies</div>
-  <ul>
-    <li>Fusion 360 (CAD modeling, assembly design)</li>
-    <li>3D printing (PLA prototype fit-checks)</li>
-    <li>Mechanical design fundamentals</li>
-  </ul>
-</article>
-     
-
-        <!-- Botanical Bot -->
-<article class="card">
-  <h3 class="card-title">Botanical Bot – Indoor Plant Watering System</h3>
-  <p class="card-tag">Automated irrigation robot</p>
-
-  <div class="card-section-title">My Role</div>
-  <ul>
-    <li>Designed & built a 3-roller peristaltic pump mechanism.</li>
-    <li>Developed custom 3D-printed housings and bearing supports.</li>
-    <li>Integrated motors and actuators to control water flow.</li>
-    <li>Tested system response & moisture-sensor accuracy.</li>
-  </ul>
-
-  <div class="card-section-title">Results</div>
-  <ul>
-    <li>Fully functional automated watering robot.</li>
-    <li>Plant detection of height & color at 85% efficiency.</li>
-  </ul>
-
-  <div class="pill-row">
-    <span class="pill">3D printing</span>
-    <span class="pill">Peristaltic pump</span>
-    <span class="pill">Sensors</span>
-  </div>
-
-  <!-- NEW: images (3D prints / final build only) -->
-  <div class="project-images">
-    <img src="bot-1.jpg" alt="Botanical Bot full view on table" />
-    <img src="bot-2.jpg" alt="Close-up of Botanical Bot peristaltic pump" />
-    <img src="bot-3.jpg" alt="Detail of sensor and vertical stage on Botanical Bot" />
-
-</div>
-
-</article>
-      
-
-  
-
-
-  
-
         
+        <article class="card">
+          <h3 class="card-title">Robotic Arm Gripper</h3>
+          <p class="card-tag">End-Effector · Fusion 360 · 3D-Printing</p>
+
+          <div class="project-images">
+            <img src="Robotic Arm Gripper.png" alt="Robotic arm gripper design" />
+            <p style="font-size:12px; color:var(--muted); border:1px dashed #333; padding:10px;">[Convert PDF to Image to display here]</p>
+          </div>
+
+          <div class="card-section-title">Project Background</div>
+          <ul>
+            <li>Designed a two-finger robotic gripper capable of securely grasping small objects with controlled force.</li>
+            <li>Modeled finger geometry, linkages, and actuation paths in Fusion 360.</li>
+            <li>Exported and 3D-printed the end-effector components to verify ergonomics and kinematic motion.</li>
+          </ul>
+
+          <div class="card-section-title">Key Responsibilities</div>
+          <ul>
+            <li>Developed CAD models for fingers, mounts, and joint components.</li>
+            <li>Simulated actuation and range-of-motion to ensure stable grasping.</li>
+          </ul>
+          
+           <div class="pill-row">
+            <span class="pill">Fusion 360</span>
+            <span class="pill">3D Printing</span>
+            <span class="pill">Prototyping</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title">Botanical Bot</h3>
+          <p class="card-tag">Automated Irrigation · Mechatronics</p>
+
+          <div class="project-images">
+            <img src="bot-1.jpg" alt="Botanical Bot full view" />
+            <img src="bot-2.jpg" alt="Peristaltic pump" />
+            <img src="bot-3.jpg" alt="Sensor detail" />
+          </div>
+
+          <div class="card-section-title">My Role</div>
+          <ul>
+            <li>Designed & built a 3-roller peristaltic pump mechanism.</li>
+            <li>Developed custom 3D-printed housings and bearing supports.</li>
+            <li>Integrated motors and actuators to control water flow.</li>
+          </ul>
+
+          <div class="card-section-title">Results</div>
+          <ul>
+            <li>Fully functional automated watering robot.</li>
+            <li>Plant detection of height & color at 85% efficiency.</li>
+          </ul>
+
+          <div class="pill-row">
+            <span class="pill">3D printing</span>
+            <span class="pill">Peristaltic pump</span>
+            <span class="pill">Sensors</span>
+          </div>
+        </article>
+
+      </div> </section>
+
     <footer class="footer">
       © <span id="year"></span> Ladan Abdi · Mechanical Engineering Intern Portfolio
     </footer>
