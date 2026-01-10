@@ -270,30 +270,30 @@
       color: var(--accent);
       font-weight: 500;
     }
+/* IMAGE GALLERIES */
+.project-images {
+  margin: 16px 0;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
 
-    /* IMAGE GALLERIES */
-    .project-images {
-      margin: 16px 0;
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
+/* EXTRA-LARGE gallery size (Stirling Engine) */
+.project-images.gallery-large {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
 
-    /* LARGE gallery size (specifically for Stirling Engine) */
-    .project-images.gallery-large {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+.project-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  object-fit: cover;
+  aspect-ratio: 16/10;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  background: #000;
+}
 
-    .project-images img {
-      width: 100%;
-      height: 100%;
-      border-radius: 8px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      object-fit: cover;
-      aspect-ratio: 4/3; /* Keeps images consistent shape */
-      transition: transform 0.2s ease, border-color 0.2s ease;
-      background: #000;
-    }
 
     .project-images img:hover {
       transform: scale(1.02);
