@@ -313,6 +313,42 @@
       color: var(--muted);
       text-align: center;
     }
+    /* ---------- PRINT FIXES (PDF export) ---------- */
+@media print {
+  /* Ensure backgrounds + colors actually print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Remove sticky header behavior in print so it doesn't overlay / repeat weirdly */
+  header.nav {
+    position: static !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Fix gradient/transparent text disappearing in print (your name becomes blank) */
+  .hero-title span {
+    -webkit-text-fill-color: initial !important;
+    -webkit-background-clip: initial !important;
+    background: none !important;
+    color: var(--accent) !important;
+  }
+
+  /* Optional: reduce heavy effects that can render poorly in PDF */
+  .card, .hero-card {
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Prevent cards from splitting across pages */
+  .card, .hero, .hero-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
   </style>
 </head>
 
