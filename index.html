@@ -194,6 +194,7 @@
       padding-left: 12px;
     }
 
+    /* Standard Card Styles */
     .card {
       border-radius: var(--radius-xl);
       background: rgba(15, 23, 42, 0.6);
@@ -205,7 +206,7 @@
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06);
       backdrop-filter: blur(10px);
-      margin-bottom: 24px;
+      margin-bottom: 24px; /* Space between stacked cards */
     }
 
     .card-title {
@@ -245,12 +246,14 @@
       margin-bottom: 6px;
     }
 
+    /* GRID LAYOUT FOR BOTTOM CARDS */
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 24px;
     }
 
+    /* PILLS */
     .pill-row {
       display: flex;
       flex-wrap: wrap;
@@ -268,25 +271,31 @@
       font-weight: 500;
     }
 
+    /* IMAGE GALLERIES */
     .project-images {
       margin: 16px 0;
       display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    /* LARGE gallery size (specifically for Stirling Engine) */
+    .project-images.gallery-large {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .project-images img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
+      height: 100%;
+      border-radius: 8px;
       border: 1px solid rgba(148, 163, 184, 0.3);
       object-fit: cover;
-      aspect-ratio: 3/2;
+      aspect-ratio: 4/3; /* default for all images */
       transition: transform 0.2s ease, border-color 0.2s ease;
       background: #000;
     }
 
-    /* Extra-tall images for Enclosure & Robot */
+    /* 2x taller ONLY for HYDEL enclosure + Robot */
     .project-images.tall img {
       aspect-ratio: 1/1;
     }
@@ -309,28 +318,177 @@
 
 <body>
   <div class="page">
+    <header class="nav">
+      <div class="nav-left">
+        <div class="nav-logo">L</div>
+        <div class="nav-title">
+          <span>Ladan Abdi</span>
+          <span>Mechanical Engineering Intern Portfolio</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          <span>Mechanical Engineering · Project Portfolio</span>
+        </div>
+        <h1 class="hero-title">Mechanical Design projects by <span>Ladan Abdi</span>.</h1>
+        <p class="hero-subtitle">
+          Specializing in precision mechanism design, CAD modeling, and rapid prototyping using SolidWorks, CATIA V5, and Fusion 360.
+        </p>
+      </div>
+
+      <aside class="hero-card">
+        <strong>Project Snapshot</strong>
+        <ul>
+          <li>Stirling Engine Design project</li>
+          <li>Automated indoor plant watering robot</li>
+          <li>Electrical Utility Enclosure Design (100A Socket &amp; Breaker)</li>
+          <li>Robotic Inspection device</li>
+        </ul>
+      </aside>
+    </section>
+
     <section id="projects" class="section">
+      <div class="section-title">Projects</div>
+
+      <!-- Stirling Engine -->
+      <article class="card">
+        <h3 class="card-title">Stirling Engine — Mechanical Design</h3>
+        <p class="card-tag">Engine · SolidWorks · 3D-Model</p>
+
+        <div class="project-images gallery-large">
+          <img src="sterling drawing.png" alt="Sterling engine drawing" />
+          <img src="sterling1.png" alt="Sterling engine view 1" />
+          <img src="sterling3.png" alt="Sterling engine view 3" />
+          <img src="sterling4.png" alt="Sterling engine view 4" />
+          <img src="sterling5.png" alt="Sterling engine view 5" />
+          <img src="sterling 6.png" alt="Sterling engine view 6" />
+        </div>
+
+        <div class="card-section-title">Project Background</div>
+        <ul>
+          <li>
+            Objective: To design and model a functional Alpha-type Stirling engine, focusing on precise linkage kinematics and thermal-to-mechanical energy conversion.
+          </li>
+        </ul>
+
+        <div class="card-section-title">Key Technical Features</div>
+        <ul>
+          <li>Kinematics: Modeled a 90-degree phase shift between the power piston and displacer to optimize the thermodynamic cycle.</li>
+          <li>Design for Assembly (DFA): Utilized standard fastener sizes (M3/M4) and incorporated press-fit bearings for the crankshaft to ensure smooth rotation.</li>
+          <li>Material Selection: Specified high-thermal-conductivity materials for the hot end and transparent borosilicate glass for the displacer cylinder to allow for visual inspection of the stroke.</li>
+        </ul>
+      </article>
+
+      <!-- Utility Enclosure -->
       <article class="card">
         <h3 class="card-title">100 AMP SOCKET &amp; BREAKER</h3>
         <p class="card-tag">SolidWorks · Sheet Metal · Utility Hardware</p>
 
+        <!-- ADD tall class here -->
         <div class="project-images tall">
           <img src="HYDEL1.jpg" alt="Enclosure assembled" />
           <img src="HYDEL2.PNG" alt="Internal layout configurations" />
         </div>
-      </article>
 
-      <article class="card">
-        <h3 class="card-title">Robotic Camera Inspection System</h3>
-        <p class="card-tag">Camera · Fusion 360 · 3D-Printed Prototype</p>
+        <div class="card-section-title">My Role</div>
+        <ul>
+          <li>Built a fully parametric 3D CAD model from physical hardware and legacy drawings.</li>
+          <li>Modeled the enclosure across multiple configurations (amperage ratings, mounting layouts, internal component variants).</li>
+          <li>Captured sheet-metal features, knockouts, and mounting interfaces for CSA-compliant production.</li>
+        </ul>
 
-        <div class="project-images tall">
-          <img src="robot-assy RENDER.jpg" alt="Robotic Camera Render" />
-          <img src="robot-camera-assembly.png" alt="Robotic Camera Close-up" />
-          <img src="robot-camera-assembly2.png" alt="Technical Drawing" />
+        <div class="card-section-title">Results</div>
+        <ul>
+          <li>Created a single reusable CAD baseline supporting multiple product variants.</li>
+          <li>Accelerated design updates and reduced errors across configurations during manufacturing changes.</li>
+        </ul>
+
+        <div class="pill-row">
+          <span class="pill">SolidWorks</span>
+          <span class="pill">Sheet metal</span>
+          <span class="pill">Parametric CAD</span>
+          <span class="pill">DFM</span>
         </div>
       </article>
+
+      <!-- Grid Projects -->
+      <div class="cards-grid">
+        <article class="card">
+          <h3 class="card-title">Botanical Bot</h3>
+          <p class="card-tag">Automated Irrigation · Mechatronics</p>
+
+          <div class="project-images">
+            <img src="bot-1.png" alt="Botanical Bot full view" />
+            <img src="bot-2.png" alt="Peristaltic pump" />
+            <img src="bot-3.jpg" alt="Sensor detail" />
+          </div>
+
+          <div class="card-section-title">My Role</div>
+          <ul>
+            <li>Designed &amp; built a 3-roller peristaltic pump mechanism.</li>
+            <li>Developed custom 3D-printed housings and bearing supports.</li>
+            <li>Integrated motors and actuators to control water flow.</li>
+          </ul>
+
+          <div class="card-section-title">Results</div>
+          <ul>
+            <li>Fully functional automated watering robot.</li>
+            <li>Plant detection of height &amp; color at 85% efficiency.</li>
+          </ul>
+
+          <div class="pill-row">
+            <span class="pill">3D printing</span>
+            <span class="pill">Peristaltic pump</span>
+            <span class="pill">Sensors</span>
+          </div>
+        </article>
+      </div>
     </section>
+
+    <!-- Robotic Inspection (kept OUTSIDE projects section to match your order) -->
+    <article class="card">
+      <h3 class="card-title">Robotic Camera Inspection System</h3>
+      <p class="card-tag">Camera · Fusion 360 · 3D-Printed Prototype</p>
+
+      <!-- ADD tall class here -->
+      <div class="project-images tall">
+        <img src="robot-assy RENDER.jpg" alt="Robotic Camera Render" />
+        <img src="robot-camera-assembly.png" alt="Robotic Camera Close-up" />
+        <img src="robot-camera-assembly2.png" alt="Technical Drawing" />
+      </div>
+
+      <div class="card-section-title">Project Background</div>
+      <ul>
+        <li>Designed an automated camera inspection robot in Fusion 360 to perform repeatable, controlled visual inspection tasks.</li>
+        <li>Implemented motorized actuation for camera positioning and smooth motion control.</li>
+        <li>Added hard stops, compliant surfaces, and proper clearances to ensure reliable, repeatable movement.</li>
+      </ul>
+
+      <div class="card-section-title">Key Responsibilities</div>
+      <ul>
+        <li>Developed 3D CAD models for structural components, joints, and mounting hardware.</li>
+        <li>Simulated actuation and range of motion to validate mechanical performance.</li>
+        <li>Collaborated with teammates to refine geometry, evaluate manufacturability, and optimize assembly.</li>
+      </ul>
+
+      <div class="pill-row">
+        <span class="pill">Fusion 360</span>
+        <span class="pill">Motor Integration</span>
+        <span class="pill">Mechanical Design</span>
+      </div>
+    </article>
+
+    <footer class="footer">
+      © <span id="year"></span> Ladan Abdi · Mechanical Engineering Intern Portfolio
+    </footer>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
