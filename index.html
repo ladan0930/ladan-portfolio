@@ -283,6 +283,10 @@
     .project-images.gallery-large {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+/* Make HYDEL + Robot galleries use wider columns */
+.project-images.tall {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
 
     .project-images img {
       width: 100%;
@@ -295,15 +299,16 @@
       background: #000;
     }
 
-    /* 2x taller ONLY for HYDEL enclosure + Robot */
-    .project-images.tall img {
-      aspect-ratio: 1/1;
-    }
+  /* 2x taller ONLY for HYDEL enclosure + Robot */
+.project-images.tall img {
+  aspect-ratio: 1/1;
+}
 
-    .project-images img:hover {
-      transform: scale(1.02);
-      border-color: var(--accent);
-    }
+.project-images img:hover {
+  transform: scale(1.02);
+  border-color: var(--accent);
+}
+
 
     .footer {
       margin-top: 40px;
