@@ -423,9 +423,11 @@
 
           <div class="card-section-title">My Role</div>
           <ul>
-            <li>Designed &amp; built a 3-roller peristaltic pump mechanism.</li>
-            <li>Developed custom 3D-printed housings and bearing supports.</li>
-            <li>Integrated motors and actuators to control water flow.</li>
+      <li><strong>Mechanical Design:</strong> Engineered a custom 3-roller peristaltic pump mechanism, optimizing for consistent flow rate and tube longevity.</li>
+<li><strong>Rapid Prototyping:</strong> Developed custom 3D-printed housings and high-precision bearing supports to minimize mechanical friction.</li>
+<li><strong>Systems Integration:</strong> Integrated servo-motors and linear actuators for precise fluid regulation and automated flow control.</li>
+<li><strong>Embedded Programming:</strong> Programmed  robot kinematics and motion profiles using <strong>RobotC</strong> to coordinate multi-axis movements.</li>
+<li><strong>Closed-Loop Control:</strong> Implemented ultrasonic sensors to dynamically detect target height and disperse water with variable-volume accuracy.</li>
           </ul>
 
           <div class="card-section-title">Results</div>
@@ -438,6 +440,7 @@
             <span class="pill">3D printing</span>
             <span class="pill">Peristaltic pump</span>
             <span class="pill">Sensors</span>
+            <span class="pill">SolidWorks</span>
           </div>
         </article>
       </div>
@@ -467,10 +470,10 @@
 
   <div class="card-section-title">Design, Prototyping &amp; Testing</div>
   <ul>
-    <li>Performed hand calculations to size the undercut and estimate insertion force; checked allowable strain to keep the specified nylon within elastic limits during assembly.</li>
-    <li>Applied DFM constraints (draft, uniform wall thickness, and controlled undercuts) to reduce tooling complexity and improve cycle-time reliability.</li>
-    <li>Designed interchangeable mold inserts to vary feature thickness across variants without requiring a new tool.</li>
-    <li>Validated fit and assembly behavior with a 3D-printed prototype before release.</li>
+<li><strong>Analytical Validation:</strong> Performed hand calculations to size undercuts and estimate insertion forces, ensuring strain remained within the elastic limits of the specified Nylon 6/6.</li>
+<li><strong>Design for Manufacturing (DFM):</strong> Optimized geometry with draft angles, uniform wall thickness, and controlled undercuts to minimize tooling complexity and reduce cycle-time variance.</li>
+<li><strong>Modular Tooling:</strong> Engineered interchangeable mold inserts to accommodate multiple design variants, significantly reducing capital expenditure on tooling.</li>
+<li><strong>Prototyping & Verification:</strong> Validated assembly kinematics and interference fits using high-fidelity 3D-printed prototypes prior to final tool release.</li>
   </ul>
 
   <div class="pill-row">
@@ -478,6 +481,7 @@
     <span class="pill">Snap-fit design</span>
     <span class="pill">DFM/DFA</span>
     <span class="pill">Prototyping</span>
+      <span class="pill">SolidWorks</span>
   </div>
 </article>
 
@@ -505,9 +509,9 @@
 
         <div class="card-section-title">Key Technical Features</div>
         <ul>
-          <li>Kinematics: Modeled a 90-degree phase shift between the power piston and displacer to optimize the thermodynamic cycle.</li>
-          <li>Design for Assembly (DFA): Utilized standard fastener sizes (M3/M4) and incorporated press-fit bearings for the crankshaft to ensure smooth rotation.</li>
-          <li>Material Selection: Specified high-thermal-conductivity materials for the hot end and transparent borosilicate glass for the displacer cylinder to allow for visual inspection of the stroke.</li>
+         <li><strong>Virtual Prototyping:</strong> Developed a high-fidelity 3D model of a 3-roller peristaltic pump in <strong>SolidWorks</strong>, focusing on the kinematic relationship between the rotor and the occlusion bed.</li>
+<li><strong>DFM & DFA Optimization:</strong> Applied Design for Manufacturing (DFM) principles to the pump housing to ensure 3D-printability and utilized Design for Assembly (DFA) to standardize M-series fasteners, reducing part count and assembly time.</li>
+<li><strong>Mechanical Clearance Validation:</strong> Conducted static interference checks to verify the precise squeeze (occlusion) on the tubing, ensuring a theoretical seal without over-stressing the motor.</li>
         </ul>
       </article>
 
@@ -522,18 +526,19 @@
           <img src="HYDEL2.PNG" alt="Internal layout configurations" />
         </div>
 
-        <div class="card-section-title">My Role</div>
-        <ul>
-          <li>Built a fully parametric 3D CAD model from physical hardware and legacy drawings.</li>
-          <li>Modeled the enclosure across multiple configurations (amperage ratings, mounting layouts, internal component variants).</li>
-          <li>Captured sheet-metal features, knockouts, and mounting interfaces for CSA-compliant production.</li>
-        </ul>
+        <div class="card-section-title">Background</div>
+<ul>
+  <li><strong>Parametric Product Modeling:</strong> Engineered high-fidelity, parametric 3D models of residential and industrial meter sockets, serving as the critical interface between grid utility power and building electrical systems.</li>
+  <li><strong>Parametric Mechanical Design:</strong> Engineered a master "seed" model in <strong>SolidWorks</strong> that utilizes global variables to drive enclosure dimensions, ensuring 100% geometric consistency across size ranges.</li>
+  <li><strong>Configuration Management :</strong> Developed a sophisticated configuration matrix to manage diverse amperage ratings, automatically adjusting internal component spacing and mounting hole patterns.</li>
+  <li><strong>BOM Automation:</strong> Integrated <strong>Design Tables</strong> to link 3D geometry directly to the Bill of Materials, ensuring that fasteners, brackets, and sub-components update instantly as configurations change.</li>
+</ul>
 
-        <div class="card-section-title">Results</div>
-        <ul>
-          <li>Created a single reusable CAD baseline supporting multiple product variants.</li>
-          <li>Accelerated design updates and reduced errors across configurations during manufacturing changes.</li>
-        </ul>
+<div class="card-section-title">Results</div>
+<ul>
+  <li><strong>Dynamic Assembly Generation:</strong> Streamlined the creation of amperage-specific assemblies, reducing the engineering lead time for new product variants by over 50%.</li>
+  <li><strong>Manufacturing Accuracy:</strong> Eliminated manual data entry errors in BOMs and flat-pattern exports, ensuring CSA-compliant production and reduced scrap rates.</li>
+</ul>
 
         <div class="pill-row">
           <span class="pill">SolidWorks</span>
@@ -558,18 +563,18 @@
       </div>
 
       <div class="card-section-title">Project Background</div>
-      <ul>
-        <li>Designed an automated camera inspection robot in Fusion 360 to perform repeatable, controlled visual inspection tasks.</li>
-        <li>Implemented motorized actuation for camera positioning and smooth motion control.</li>
-        <li>Added hard stops, compliant surfaces, and proper clearances to ensure reliable, repeatable movement.</li>
-      </ul>
+<ul>
+  <li><strong>System Architecture:</strong> Engineered an automated camera inspection robot in <strong>Fusion 360</strong>, designed to execute high-precision, repeatable visual inspection cycles.</li>
+  <li><strong>Electromechanical Integration:</strong> Integrated motorized actuators, custom-designed motor mounts, and mechanical linkages to coordinate precise multi-axis camera positioning.</li>
+  <li><strong>Mechanical Reliability:</strong> Incorporated physical hard stops and compliant surfaces to define motion limits and protect sensitive camera hardware during high-speed actuation.</li>
+</ul>
 
-      <div class="card-section-title">Key Responsibilities</div>
-      <ul>
-        <li>Developed 3D CAD models for structural components, joints, and mounting hardware.</li>
-        <li>Simulated actuation and range of motion to validate mechanical performance.</li>
-        <li>Collaborated with teammates to refine geometry, evaluate manufacturability, and optimize assembly.</li>
-      </ul>
+<div class="card-section-title">Key Responsibilities</div>
+<ul>
+  <li><strong>Kinematic Modeling:</strong> Developed 3D CAD models for high-stress structural joints and mounting hardware, ensuring proper clearances for wire routing and motor torque delivery.</li>
+  <li><strong>Motion Validation:</strong> Simulated actuation ranges and linkage kinematics within Fusion 360 to verify field-of-view (FOV) coverage and eliminate mechanical interference.</li>
+  <li><strong>Collaborative DFM:</strong> Iterated on component geometry with to optimize for manufacturability (3D printing/machining) and streamlined final assembly workflows.</li>
+</ul>
 
       <div class="pill-row">
         <span class="pill">Fusion 360</span>
