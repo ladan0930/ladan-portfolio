@@ -418,18 +418,27 @@
   <div class="project-images tall">
     <img src="380CAD.png" alt="Isometric view of the Scotch Yoke robot" />
     <img src="ME380CADtopview.png" alt="Top view showing the Scotch Yoke linkage" />
+        <img src="IMG_0769.png" alt="GRIPPERS" />
+ <img src="IMG_0770.png" alt="GRIPPERS" />
     </div>
 
   <div class="card-section-title">My Role</div>
   <ul>
-    <li><strong>Z-Axis Actuation:</strong> Designed and modeled a rack-and-pinion vertical lift system to enable precise object clearance from the work surface.</li>
-    <li><strong>Electronic Packaging:</strong> Developed a custom housing for the Arduino microcontroller, prioritizing compact wire management and ease of accessibility for debugging.</li>
-    <li><strong>Mechanical Integration:</strong> Coordinated the interface between the $Z$-travel assembly and the primary Scotch Yoke linkage to maintain structural rigidity during high-speed actuation.</li>
-    <li><strong>Actuator Selection:</strong> Sized and integrated micro-servos for the dual-gripper end-effectors, ensuring sufficient torque for reliable object manipulation.</li>
-    <li><strong>Prototyping & DFM:</strong> Optimized components for 3D printing, focusing on tolerances for the sliding rack and yoke interfaces to reduce mechanical backlash.</li>
-  </ul>
+     <<ul>
+    <li><strong>Overview:</strong> Designed and prototyped a high-speed robotic system to automate the sorting of four distinct, "difficult-to-grasp" objects. The system utilizes a unique dual-gripper configuration and a planetary gear mechanism to achieve a placement accuracy of &lt;10mm while meeting a rigorous sub-22-second cycle time. By integrating a lead screw Z-axis and a Scotch-Yoke rotary subsystem, the design successfully balances high-speed throughput with mechanical reliability.</li>
+    
+    <li><strong>Z-Axis Actuation:</strong> Engineered and modeled a lead screw vertical lift system driven by high-torque servos to enable precise object clearance and stable Z-travel.</li>
+    
+    <li><strong>Mechanical Integration:</strong> Coordinated the interface between the vertical travel assembly and the primary Scotch-Yoke linkage, utilizing gussets and increased plate thickness to maintain structural rigidity during high-speed actuation.</li>
+    
+    <li><strong>End-Effector Design:</strong> Sized and integrated MG995 high-torque servos for a dual-gripper system, featuring an underactuated planetary gear expansion mechanism to secure complex geometries.</li>
+    
+    <li><strong>Electronic Packaging:</strong> Developed a custom housing for the Arduino microcontroller and power distribution, prioritizing compact wire management and ease of accessibility for debugging.</li>
+    
+    <li><strong>Prototyping & DFM:</strong> Optimized components for FDM 3D printing (PLA/PETG), focusing on tolerance stack-up for sliding interfaces and standardizing M3 hardware to reduce assembly time and mechanical backlash.</li>
+</ul>
 
-  <div class="card-section-title">Design Features</div>
+<div class="card-section-title">Design Features</div>
   <ul>
     <li>Scotch Yoke mechanism for converting rotational motion to pure sinusoidal linear translation.</li>
     <li>Integrated rack-and-pinion $Z$-stage for vertical pick-and-place capabilities.</li>
